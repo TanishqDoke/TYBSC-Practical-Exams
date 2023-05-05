@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class LinkedListExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        // Accept 'N' subject names from the user
+        System.out.print("Enter the number of subjects: ");
+        int n = scanner.nextInt();
+
+        System.out.println("Enter " + n + " subject names:");
+        for (int i = 0; i < n; i++) {
+            String subject = scanner.next();
+            linkedList.add(subject);
+        }
+
+        // Display the subject names using the Iterator interface
+        System.out.println("Subject names:");
+
+        Iterator<String> iterator = linkedList.iterator();
+        while (iterator.hasNext()) {
+            String subject = iterator.next();
+            System.out.println(subject);
+        }
+    }
+}
