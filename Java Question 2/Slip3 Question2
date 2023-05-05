@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class LinkedList2 {
+    public static void main(String[] args) {
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        // Add elements to the end of the list
+        linkedList.add("Tanishq");
+        linkedList.add("Atharva");
+        linkedList.add("Harsh");
+        linkedList.add("Prathmesh");
+
+        System.out.println("LinkedList after adding elements: " + linkedList);
+
+        // Delete the first element of the list
+        linkedList.removeFirst();
+
+        System.out.println("LinkedList after deleting first element: " + linkedList);
+
+        // Display the contents of the list in reverse order
+        System.out.println("LinkedList contents in reverse order:");
+
+        ListIterator<String> listIterator = linkedList.listIterator(linkedList.size());
+        while (listIterator.hasPrevious()) {
+            String element = listIterator.previous();
+            System.out.println(element);
+        }
+    }
+}
