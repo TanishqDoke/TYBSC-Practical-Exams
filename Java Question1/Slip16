@@ -1,0 +1,23 @@
+package TY_Final_Sprint;
+
+import java.util.*;
+
+public class demo {
+    public static void main(String[] args) {
+        TreeSet<String> treeSet = new TreeSet<>();
+
+        // Add some colors to the TreeSet
+        treeSet.add("Red");
+        treeSet.add("Green");
+        treeSet.add("Blue");
+        treeSet.add("Yellow");
+        treeSet.add("Orange");
+
+        // Print out the contents of the TreeSet in ascending order
+        System.out.println("TreeSet contents in ascending order:");
+
+        for (String color : treeSet) {
+            System.out.println(color);
+        }
+    }
+}
